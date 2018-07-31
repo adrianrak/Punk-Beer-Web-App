@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './beer.css';
+
 export default class Beer extends Component {
     constructor(props) {
         super(props);
@@ -20,13 +22,19 @@ export default class Beer extends Component {
     }
     render() {
         return (
-        <div>
-          <h1>Hello!</h1>
-          {this.state.beers.map((data) =>
-              <div><img src={data.image_url}></img></div>
-        )}
-        
-        </div>
+        <div>    
+            <div className="container">
+                <h1>Hello!</h1>
+                <div className="row">
+                    {this.state.beers.map((data) =>
+                    <div className="col-md-4 border border-primary">
+                        <h5>{data.name}</h5>
+                       <img src={data.image_url}></img>
+                    </div>
+                    )}
+                </div>
+            </div>
+        </div>  
     );
   }
 }
