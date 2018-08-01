@@ -27,7 +27,7 @@ export default class Beer extends Component {
                 <h1>Hello!</h1>
                 <div className="row">
                     {this.state.beers.map((data) =>
-                    <div className="col-md-4 border border-primary">
+                    <div key={data.id} className="col-md-4 border border-primary">
                         <h5>{data.name}</h5>
                        <img src={data.image_url}></img>
                     </div>
