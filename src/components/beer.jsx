@@ -8,7 +8,7 @@ export default class Beer extends Component {
         this.state = {
             beers: [],
             currentPage: 1,
-            beersPerPage: 10
+            beersPerPage: 9
 
         }
     }
@@ -53,13 +53,13 @@ export default class Beer extends Component {
 
     const renderPageNumbers = pageNumbers.map(number => {
       return (
-        <li
-          key={number}
-          id={number}
-          onClick={this.handleClick}
-        >
-          {number}
-        </li>
+            <li className="page-item page-link"
+                key={number}
+                id={number}
+                onClick={this.handleClick}
+            >
+                {number}
+            </li>
       );
     });
 
@@ -70,7 +70,7 @@ export default class Beer extends Component {
                 <div className="row">
                     {renderBeers}
                 </div>
-                <ul id="page-numbers">
+                <ul id="page-numbers" className="pagination numbers-page">
                     {renderPageNumbers}
                 </ul>
             </div>

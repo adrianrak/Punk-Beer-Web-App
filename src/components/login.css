@@ -1,0 +1,11 @@
+.link-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40vh;
+}
+
+.img-size {
+    height: 40px;
+    width: 172px;
+}
