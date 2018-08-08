@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Navbar from './navbar';
 import './beer.css';
 
 export default class Beer extends Component {
@@ -64,7 +64,8 @@ export default class Beer extends Component {
     });
 
         return (
-        <div>    
+        <div>   
+            <Navbar /> 
             <div className="container">
                 <h1>Hello!</h1>
                 <div className="row">

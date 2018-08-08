@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import {HashRouter, Route, Link, Switch, NavLink} from 'react-router-dom';
 import './App.css';
-import Navbar from './components/navbar';
 import Beer from './components/beer';
 import Login from './components/Login';
 
@@ -9,9 +8,14 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Login />
-        {/* <Navbar />
-        <Beer /> */}
+        <HashRouter>
+          <div>
+            <Switch>
+              <Route exact path='/' component={Login} />
+              <Route path='/beers' component={Beer} /> 
+            </Switch>
+          </div>
+        </HashRouter>
       </div>
     );
   }
