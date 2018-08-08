@@ -40,10 +40,12 @@ export default class Beer extends Component {
             console.log('indexOfLastBeers', indexOfLastBeers);
             console.log('currentBeers', currentBeers);
         const renderBeers = currentBeers.map((data, index) => {
-            return <div key={data.id} className="col-md-4 border border-primary">
-            <h5>{data.name}</h5>
-           <img src={data.image_url}></img>
-        </div>;
+            return <div key={data.id} className="col-md-4">
+                <div className="box-size border border-primary">
+                    <h5>{data.name}</h5>
+                    <img src={data.image_url}></img>
+                </div>
+            </div>;
         });
 
         const pageNumbers = [];
