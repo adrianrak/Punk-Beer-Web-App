@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
+.login-page {
+    margin: 0 auto;
+    background: url('https://images.pexels.com/photos/991970/pexels-photo-991970.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260') no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 350px;
+    height: 550px;
+    border: 2px solid #301B19;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.8);
+}
+.login-form h1 {
+    font-family: 'Do Hyeon', sans-serif;
+    padding: 20px;
+    color: #FFF;
+    background-color: #D2B071;
+}
+.links {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 120px;
+}
+.img-size {
+    height: 50px;
+    width: 180px;
+}

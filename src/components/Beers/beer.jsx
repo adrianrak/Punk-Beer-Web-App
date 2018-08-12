@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Navbar from './navbar';
+import Navbar from './../Navbar/navbar';
 import './beer.css';
+import {BeersUrl} from './../../config';
 
 export default class Beer extends Component {
     constructor(props) {
@@ -14,7 +15,7 @@ export default class Beer extends Component {
     }
 
     componentDidMount() {
-        fetch('https://api.punkapi.com/v2/beers?page=1&per_page=80')
+        fetch(BeersUrl)
         .then(response => response.json())
         .then(data => {
             console.log(data);
@@ -68,7 +69,7 @@ export default class Beer extends Component {
         return (
         <div>   
             <Navbar /> 
-            <div className="container">
+            <div className="container beers-page">
                 <h1>Hello!</h1>
                 <div className="row">
                     {renderBeers}
