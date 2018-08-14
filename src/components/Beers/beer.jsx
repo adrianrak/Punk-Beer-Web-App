@@ -15,12 +15,18 @@ export default class Beer extends Component {
     }
 
     componentDidMount() {
+        this.getBeer();
+    }
+
+    getBeer = () => {
         fetch(BeersUrl)
             .then(response => response.json())
             .then(beer => {
                 console.log(beer);
                 let beers = beer;
-                this.setState({ beers: beers })
+                this.setState({
+                    beers: beers
+                })
                 console.log(this.state.beers);
             })
     }
