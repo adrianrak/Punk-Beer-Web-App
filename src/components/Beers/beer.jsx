@@ -39,18 +39,18 @@ export default class Beer extends Component {
 
     render() {
         const { beers, currentPage, beersPerPage } = this.state;
-
         const indexOfLastBeers = currentPage * beersPerPage;
         const indexOfFirstBeers = indexOfLastBeers - beersPerPage;
         const currentBeers = beers.slice(indexOfFirstBeers, indexOfLastBeers);
-        console.log('indexOfFirstBeers', indexOfFirstBeers);
-        console.log('indexOfLastBeers', indexOfLastBeers);
-        console.log('currentBeers', currentBeers);
         const renderBeers = currentBeers.map((beer, index) => {
-            return <div key={beer.id} className="col-md-4">
-                <div className="box-size border border-primary">
-                    <h5>{beer.name}</h5>
+            return <div key={beer.id} className="col-md-12">
+                <div className="box-size border">
                     <img src={beer.image_url}></img>
+                    <div>
+                        <h2>{beer.name}</h2>
+                        <h4>{beer.description}</h4>
+                        <a href="" data-toggle="tooltip" data-placement="right" title="Add to Favourites" ><i className="far fa-star"></i></a>
+                    </div>
                 </div>
             </div>;
         });
@@ -76,7 +76,9 @@ export default class Beer extends Component {
             <div>
                 <Navbar />
                 <div className="container beers-page">
-                    <h1>Hello!</h1>
+                    <ul id="page-numbers" className="pagination numbers-page">
+                        {renderPageNumbers}
+                    </ul>
                     <div className="row">
                         {renderBeers}
                     </div>

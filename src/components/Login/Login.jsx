@@ -9,6 +9,7 @@ export default class FaceLogin extends React.Component {
   render() {
     return (
       <div className="login-page">
+        <h1 className="heading">Love Beers</h1>
         <div className="login-form">
           <h1>Sign in</h1>
           <div className="links">

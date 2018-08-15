@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
+
 .login-page {
     margin: 0 auto;
     background: url('https://images.pexels.com/photos/991970/pexels-photo-991970.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260') no-repeat;
@@ -7,6 +7,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+.heading {
+    padding: 30px;
+    margin-bottom: 40px;
+    color: #FFF;
+    background-color: #D2B071;
+    font-size: 80px;
+    text-transform: uppercase;
+    border-radius: 8px;
 }
 .login-form {
     display: flex;
@@ -19,10 +29,10 @@
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.8);
 }
 .login-form h1 {
-    font-family: 'Do Hyeon', sans-serif;
     padding: 20px;
     color: #FFF;
     background-color: #D2B071;
+    border-radius: 8px;
 }
 .links {
     display: flex;

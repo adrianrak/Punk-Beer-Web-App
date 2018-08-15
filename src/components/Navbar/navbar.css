@@ -1,3 +1,10 @@
 .navbar {
-    background-color: #e3f2fd;
+    background-color: #D2B071;
+    height: 70px;
+    margin-bottom: 80px;
+}
+
+.navbar a {
+    color: #FFF;
+    font-size: 25px;
 }
